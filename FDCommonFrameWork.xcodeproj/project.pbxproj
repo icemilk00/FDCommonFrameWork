@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		E6C567901BD8874300E385CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C5678F1BD8874300E385CF /* main.m */; };
 		E6C567931BD8874300E385CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C567921BD8874300E385CF /* AppDelegate.m */; };
-		E6C567961BD8874300E385CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C567951BD8874300E385CF /* ViewController.m */; };
-		E6C567991BD8874300E385CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6C567971BD8874300E385CF /* Main.storyboard */; };
 		E6C5679B1BD8874300E385CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6C5679A1BD8874300E385CF /* Images.xcassets */; };
-		E6C5679E1BD8874300E385CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C5679C1BD8874300E385CF /* LaunchScreen.xib */; };
 		E6C567AA1BD8874300E385CF /* FDCommonFrameWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C567A91BD8874300E385CF /* FDCommonFrameWorkTests.m */; };
+		E6C567C71BD8D41500E385CF /* BaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C567C31BD8D41500E385CF /* BaseNavController.m */; };
+		E6C567C81BD8D41500E385CF /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C567C61BD8D41500E385CF /* BaseTabBarController.m */; };
+		E6C567CE1BD8D69700E385CF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C567CD1BD8D69700E385CF /* BaseViewController.m */; };
+		E6C567D81BD8E1E000E385CF /* DefaultNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C567D71BD8E1E000E385CF /* DefaultNavView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,20 @@
 		E6C5678F1BD8874300E385CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E6C567911BD8874300E385CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E6C567921BD8874300E385CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E6C567941BD8874300E385CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E6C567951BD8874300E385CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E6C567981BD8874300E385CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E6C5679A1BD8874300E385CF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E6C5679D1BD8874300E385CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E6C567A31BD8874300E385CF /* FDCommonFrameWorkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FDCommonFrameWorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C567A81BD8874300E385CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6C567A91BD8874300E385CF /* FDCommonFrameWorkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDCommonFrameWorkTests.m; sourceTree = "<group>"; };
+		E6C567C21BD8D41500E385CF /* BaseNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavController.h; sourceTree = "<group>"; };
+		E6C567C31BD8D41500E385CF /* BaseNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavController.m; sourceTree = "<group>"; };
+		E6C567C51BD8D41500E385CF /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		E6C567C61BD8D41500E385CF /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		E6C567CA1BD8D51B00E385CF /* FD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FD-Prefix.pch"; sourceTree = "<group>"; };
+		E6C567CC1BD8D69700E385CF /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		E6C567CD1BD8D69700E385CF /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		E6C567CF1BD8DE9500E385CF /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonDefine.h; path = FDCommonFrameWork/CommonDefine.h; sourceTree = SOURCE_ROOT; };
+		E6C567D61BD8E1E000E385CF /* DefaultNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultNavView.h; sourceTree = "<group>"; };
+		E6C567D71BD8E1E000E385CF /* DefaultNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultNavView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +88,11 @@
 		E6C5678C1BD8874300E385CF /* FDCommonFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				E6C567C01BD8D41500E385CF /* BaseClass */,
 				E6C567911BD8874300E385CF /* AppDelegate.h */,
 				E6C567921BD8874300E385CF /* AppDelegate.m */,
-				E6C567941BD8874300E385CF /* ViewController.h */,
-				E6C567951BD8874300E385CF /* ViewController.m */,
-				E6C567971BD8874300E385CF /* Main.storyboard */,
+				E6C567C91BD8D45100E385CF /* Main */,
 				E6C5679A1BD8874300E385CF /* Images.xcassets */,
-				E6C5679C1BD8874300E385CF /* LaunchScreen.xib */,
 				E6C5678D1BD8874300E385CF /* Supporting Files */,
 			);
 			path = FDCommonFrameWork;
@@ -98,6 +103,7 @@
 			children = (
 				E6C5678E1BD8874300E385CF /* Info.plist */,
 				E6C5678F1BD8874300E385CF /* main.m */,
+				E6C567CA1BD8D51B00E385CF /* FD-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,6 +123,62 @@
 				E6C567A81BD8874300E385CF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E6C567C01BD8D41500E385CF /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				E6C567CF1BD8DE9500E385CF /* CommonDefine.h */,
+				E6C567D51BD8E1E000E385CF /* DefaultNavView */,
+				E6C567C11BD8D41500E385CF /* BaseNavController */,
+				E6C567CB1BD8D66700E385CF /* BaseViewController */,
+				E6C567C41BD8D41500E385CF /* BaseTabBarController */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		E6C567C11BD8D41500E385CF /* BaseNavController */ = {
+			isa = PBXGroup;
+			children = (
+				E6C567C21BD8D41500E385CF /* BaseNavController.h */,
+				E6C567C31BD8D41500E385CF /* BaseNavController.m */,
+			);
+			path = BaseNavController;
+			sourceTree = "<group>";
+		};
+		E6C567C41BD8D41500E385CF /* BaseTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				E6C567C51BD8D41500E385CF /* BaseTabBarController.h */,
+				E6C567C61BD8D41500E385CF /* BaseTabBarController.m */,
+			);
+			path = BaseTabBarController;
+			sourceTree = "<group>";
+		};
+		E6C567C91BD8D45100E385CF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E6C567CB1BD8D66700E385CF /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E6C567CC1BD8D69700E385CF /* BaseViewController.h */,
+				E6C567CD1BD8D69700E385CF /* BaseViewController.m */,
+			);
+			name = BaseViewController;
+			path = FDCommonFrameWork/BaseClass/BaseViewController;
+			sourceTree = SOURCE_ROOT;
+		};
+		E6C567D51BD8E1E000E385CF /* DefaultNavView */ = {
+			isa = PBXGroup;
+			children = (
+				E6C567D61BD8E1E000E385CF /* DefaultNavView.h */,
+				E6C567D71BD8E1E000E385CF /* DefaultNavView.m */,
+			);
+			path = DefaultNavView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +230,7 @@
 				TargetAttributes = {
 					E6C567891BD8874300E385CF = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = PL54F4LJG7;
 					};
 					E6C567A21BD8874300E385CF = {
 						CreatedOnToolsVersion = 6.4;
@@ -199,8 +262,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6C567991BD8874300E385CF /* Main.storyboard in Resources */,
-				E6C5679E1BD8874300E385CF /* LaunchScreen.xib in Resources */,
 				E6C5679B1BD8874300E385CF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6C567961BD8874300E385CF /* ViewController.m in Sources */,
+				E6C567C81BD8D41500E385CF /* BaseTabBarController.m in Sources */,
+				E6C567CE1BD8D69700E385CF /* BaseViewController.m in Sources */,
+				E6C567D81BD8E1E000E385CF /* DefaultNavView.m in Sources */,
 				E6C567931BD8874300E385CF /* AppDelegate.m in Sources */,
 				E6C567901BD8874300E385CF /* main.m in Sources */,
+				E6C567C71BD8D41500E385CF /* BaseNavController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,25 +306,6 @@
 			targetProxy = E6C567A41BD8874300E385CF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E6C567971BD8874300E385CF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E6C567981BD8874300E385CF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E6C5679C1BD8874300E385CF /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E6C5679D1BD8874300E385CF /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E6C567AB1BD8874300E385CF /* Debug */ = {
@@ -288,6 +333,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FDCommonFrameWork/FD-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -331,6 +377,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FDCommonFrameWork/FD-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -349,9 +396,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FDCommonFrameWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -359,9 +410,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FDCommonFrameWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -17,6 +17,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+
+    BaseTabBarController *mainTabBarController = [[BaseTabBarController alloc] init];
+    
+    BaseViewController *vc1 = [[BaseViewController alloc] init]; vc1.title = @"vc1";
+    BaseViewController *vc2 = [[BaseViewController alloc] init]; vc2.title = @"vc2";
+    BaseViewController *vc3 = [[BaseViewController alloc] init]; vc3.title = @"vc3";
+    BaseViewController *vc4 = [[BaseViewController alloc] init]; vc4.title = @"vc4";
+    
+    [mainTabBarController setViewControllers:@[vc1, vc2, vc3, vc4]];
+    
+    BaseNavController *mainNav = [[BaseNavController alloc] initWithRootViewController:mainTabBarController];
+    mainNav.navigationBar.hidden = YES;
+    
+    self.window.rootViewController = mainNav;
+    
+    
     return YES;
 }
 
