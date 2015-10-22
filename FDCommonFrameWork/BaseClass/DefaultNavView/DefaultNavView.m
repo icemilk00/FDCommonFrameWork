@@ -8,6 +8,9 @@
 
 #import "DefaultNavView.h"
 
+NSString * const KeyLeftButton = @"KeyLeftButton";
+NSString * const KeyRightButton = @"KeyRightButton";
+
 #define NAV_TITLE_LABEL_FRAME  CGRectMake(SCREEN_WIDTH/2 - 220.0f/2, STATENBAR_HEIGHT, 220.0f, 44.0f)
 
 @implementation DefaultNavView
@@ -57,16 +60,38 @@
 {
     for (NSString *configStr in configArray) {
         
-        if ([configStr isEqualToString:LeftButton]) {
-            
+        if ([configStr isEqualToString:KeyLeftButton]) {
+            [self setupLeftButton];
         }
         
-        if ([configStr isEqualToString:RightButton]) {
+        if ([configStr isEqualToString:KeyRightButton]) {
             
         }
     }
 }
 
 
+@end
+
+
+@implementation DefaultNavView (ExtenLeftButton)
+
+-(void)setLeftButton:(UIButton *)leftButton
+{
+    objc_setAssociatedObject(self, &KeyLeftButton, leftButton, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+-(UIButton *)leftButton
+{
+    return objc_getAssociatedObject(self, &KeyLeftButton);
+}
+
+-(void)setupLeftButton
+{
+    self.leftButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 20.0f, 44.0f, 44.0f)];
+    self.leftButton.backgroundColor = [UIColor redColor];
+    [self addSubview:self.leftButton];
+}
 
 @end
+

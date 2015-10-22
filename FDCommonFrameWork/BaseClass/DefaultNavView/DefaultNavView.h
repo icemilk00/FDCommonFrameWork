@@ -8,12 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-NSString * const LeftButton = @"LeftButton";
-NSString * const RightButton = @"RightButton";
+extern NSString * const KeyLeftButton;
+extern NSString * const KeyRightButton;
 
 @interface DefaultNavView : UIView
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIImageView *bgImageView;
+
+-(id)initWithConfig:(NSArray *)configArray;
+
+@end
+
+@interface DefaultNavView (ExtenLeftButton)
+
+@property (nonatomic, strong) UIButton *leftButton;
+
+-(void)setupLeftButton;
 
 @end

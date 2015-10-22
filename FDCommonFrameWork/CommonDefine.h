@@ -19,4 +19,5 @@
 #define STATENBAR_HEIGHT     (20.0f)                                                    //状态栏默认高度
 #define NAVIGATIONBAR_HEIGHT (CURRENT_IOS_VERISON >= 7 ? 64.0f:44.0f)               //导航栏默认高度
 
+
 #endif

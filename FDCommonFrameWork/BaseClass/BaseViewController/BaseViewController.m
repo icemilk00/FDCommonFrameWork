@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "DefaultNavView.h"
 
 @interface BaseViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    DefaultNavView *navView = [[DefaultNavView alloc] initWithConfig:@[KeyLeftButton]];
+    navView.titleLabel.text = self.title;
+    [self.view addSubview:navView];
+    
 }
 
 - (void)didReceiveMemoryWarning {

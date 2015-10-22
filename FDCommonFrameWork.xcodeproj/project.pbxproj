@@ -15,6 +15,7 @@
 		E6C567C81BD8D41500E385CF /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C567C61BD8D41500E385CF /* BaseTabBarController.m */; };
 		E6C567CE1BD8D69700E385CF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C567CD1BD8D69700E385CF /* BaseViewController.m */; };
 		E6C567D81BD8E1E000E385CF /* DefaultNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C567D71BD8E1E000E385CF /* DefaultNavView.m */; };
+		E6C8A0AF1BD94919006FC268 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C8A0AE1BD94919006FC268 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E6C567CF1BD8DE9500E385CF /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonDefine.h; path = FDCommonFrameWork/CommonDefine.h; sourceTree = SOURCE_ROOT; };
 		E6C567D61BD8E1E000E385CF /* DefaultNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultNavView.h; sourceTree = "<group>"; };
 		E6C567D71BD8E1E000E385CF /* DefaultNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultNavView.m; sourceTree = "<group>"; };
+		E6C8A0AE1BD94919006FC268 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6C8A0AF1BD94919006FC268 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +73,7 @@
 		E6C567811BD8874300E385CF = {
 			isa = PBXGroup;
 			children = (
+				E6C8A0AE1BD94919006FC268 /* Foundation.framework */,
 				E6C5678C1BD8874300E385CF /* FDCommonFrameWork */,
 				E6C567A61BD8874300E385CF /* FDCommonFrameWorkTests */,
 				E6C5678B1BD8874300E385CF /* Products */,
@@ -399,7 +403,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FDCommonFrameWork/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -413,7 +417,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FDCommonFrameWork/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -473,6 +477,7 @@
 				E6C567AF1BD8874300E385CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6C567B01BD8874300E385CF /* Build configuration list for PBXNativeTarget "FDCommonFrameWorkTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +486,7 @@
 				E6C567B21BD8874300E385CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
