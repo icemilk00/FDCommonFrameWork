@@ -15,9 +15,16 @@
 #import "CommonDefine.h"
 
 #import "AppDelegate.h"
+
 #import "BaseTabBarController.h"
 #import "BaseNavController.h"
 #import "BaseViewController.h"
+#import "DefaultNavView.h"
+
+#import "RequestManager.h"
+#import "BaseAPIManager.h"
+
+#import "JSONKit.h"
 
 #import <objc/runtime.h>
 

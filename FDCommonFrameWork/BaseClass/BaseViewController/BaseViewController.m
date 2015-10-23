@@ -7,7 +7,6 @@
 //
 
 #import "BaseViewController.h"
-#import "DefaultNavView.h"
 
 @interface BaseViewController ()
 
@@ -19,10 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    DefaultNavView *navView = [[DefaultNavView alloc] initWithConfig:@[KeyLeftButton]];
-    navView.titleLabel.text = self.title;
-    [self.view addSubview:navView];
-    
+    [self setupDefaultNavWitConfig:@[]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,5 +35,19 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+@end
+
+
+@implementation BaseViewController (SetupDefaultNavView)
+
+-(DefaultNavView *)setupDefaultNavWitConfig:(NSArray *)array
+{
+    DefaultNavView *defaultNav = [[DefaultNavView alloc] initWithConfig:array];
+    defaultNav.title = self.title;
+    defaultNav.defaultNavDelegate = self;
+    [self.view addSubview:defaultNav];
+    return defaultNav;
+}
 
 @end

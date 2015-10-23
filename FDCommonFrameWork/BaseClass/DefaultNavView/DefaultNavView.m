@@ -50,12 +50,18 @@ NSString * const KeyRightButton = @"KeyRightButton";
 {
     if (!_bgImageView) {
         self.bgImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+        [_bgImageView setImage:[UIImage imageNamed:@"navigationbarBg"]];
         _bgImageView.backgroundColor = [UIColor clearColor];
     }
     return _bgImageView;
 }
 
-#pragma mark - UI Config -
+-(void)setTitle:(NSString *)title
+{
+    self.titleLabel.text = title;
+}
+
+#pragma mark -- UI Config --
 -(void)setupUICongif:(NSArray *)configArray
 {
     for (NSString *configStr in configArray) {
@@ -65,7 +71,7 @@ NSString * const KeyRightButton = @"KeyRightButton";
         }
         
         if ([configStr isEqualToString:KeyRightButton]) {
-            
+            [self setupRightButton];
         }
     }
 }
@@ -89,8 +95,46 @@ NSString * const KeyRightButton = @"KeyRightButton";
 -(void)setupLeftButton
 {
     self.leftButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 20.0f, 44.0f, 44.0f)];
-    self.leftButton.backgroundColor = [UIColor redColor];
+    [self.leftButton setImage:[UIImage imageNamed:@"navigationbar_back"] forState:UIControlStateNormal];
+    [self.leftButton addTarget:self action:@selector(leftButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.leftButton];
+}
+
+-(void)leftButtonClicked:(UIButton *)sender
+{
+    NSLog(@"NavLeftButtonClicked ==");
+    if (self.defaultNavDelegate && [self.defaultNavDelegate respondsToSelector:@selector(leftButtonClicked:)]) {
+        [self.defaultNavDelegate navLeftButtonClicked:sender];
+    }
+}
+
+@end
+
+@implementation DefaultNavView (ExtenRightButton)
+
+-(void)setRightButton:(UIButton *)rightButton
+{
+    objc_setAssociatedObject(self, &KeyRightButton, rightButton, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+-(UIButton *)rightButton
+{
+    return objc_getAssociatedObject(self, &KeyRightButton);
+}
+
+-(void)setupRightButton
+{
+    self.rightButton = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width - 44.0f, 20.0f, 44.0f, 44.0f)];
+    [self.rightButton addTarget:self action:@selector(rightButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:self.rightButton];
+}
+
+-(void)rightButtonClicked:(UIButton *)sender
+{
+    NSLog(@"NavRightButtonClicked ==");
+    if (self.defaultNavDelegate && [self.defaultNavDelegate respondsToSelector:@selector(rightButtonClicked:)]) {
+        [self.defaultNavDelegate navRightButtonClicked:sender];
+    }
 }
 
 @end

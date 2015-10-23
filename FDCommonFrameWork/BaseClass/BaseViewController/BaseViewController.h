@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DefaultNavView.h"
 
 @interface BaseViewController : UIViewController
+
+@end
+
+
+@interface BaseViewController (SetupDefaultNavView) <DefaultNavDelegate>
+
+-(DefaultNavView *)setupDefaultNavWitConfig:(NSArray *)array;
 
 @end
